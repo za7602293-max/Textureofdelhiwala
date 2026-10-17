@@ -1,0 +1,76 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --gold: #C9A24B;
+    --gold-light: #E5C378;
+    --gold-dark: #997831;
+    --dark-bg: #0B0B0B;
+    --dark-surface: #141414;
+    --dark-card: #1B1B1B;
+    --off-white: #F8F5EE;
+  }
+
+  html, body, #root {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    background-color: #0B0B0B;
+    color: #F8F5EE;
+    overflow-x: hidden;
+    width: 100%;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  h1, h2, h3, .font-serif {
+    font-family: 'Playfair Display', Georgia, serif;
+  }
+}
+
+/* Custom gold button glow */
+.gold-glow {
+  box-shadow: 0 0 20px rgba(201, 162, 75, 0.35);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.gold-glow:hover {
+  box-shadow: 0 0 35px rgba(201, 162, 75, 0.65), 0 0 10px rgba(255, 255, 255, 0.2);
+}
+
+.gold-outline-glow:hover {
+  box-shadow: 0 0 25px rgba(201, 162, 75, 0.4);
+  background-color: rgba(201, 162, 75, 0.1);
+}
+
+/* Subtle gold metallic shimmer */
+.gold-gradient-text {
+  background: linear-gradient(135deg, #FFF1CA 0%, #C9A24B 50%, #9E7B30 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gold-border-gradient {
+  border-image: linear-gradient(to right, rgba(201, 162, 75, 0.1), rgba(201, 162, 75, 0.8), rgba(201, 162, 75, 0.1)) 1;
+}
+
+/* Custom smooth scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #0B0B0B;
+}
+::-webkit-scrollbar-thumb {
+  background: #2A2A2A;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #C9A24B;
+}
+
+/* Hide scrollbar utility */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
