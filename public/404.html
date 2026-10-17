@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Texture of Delhi Wala</title>
+    <script>
+      // Single Page App redirect for GitHub Pages
+      sessionStorage.redirect = location.href;
+      var path = location.pathname;
+      var repo = path.split('/')[1];
+      if (repo && location.hostname.indexOf('github.io') !== -1) {
+        location.replace('/' + repo + '/');
+      } else {
+        location.replace('/');
+      }
+    </script>
+  </head>
+  <body>
+    <p>Redirecting to Texture of Delhi Wala...</p>
+  </body>
+</html>
